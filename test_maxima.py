@@ -20,6 +20,43 @@ def test_sine_wave():
     exp = [16,78]
     assert exp == out
 
+def test_simple_sequence_max_both_borders():
+    inp = [4, 2, 1, 3, 1, 2]
+    out = find_maxima(inp)
+    exp = [0,3,5]
+    assert exp == out
+
+def test_simple_sequence_borders2():
+    inp = [4, 2, 1, 3, 1, 5]
+    out = find_maxima(inp)
+    exp = [0,3,5]
+    assert exp == out
+
+
+def test_simple_sequence_borders3():
+    inp = [4, 2, 1, 3, 1]
+    out = find_maxima(inp)
+    exp = [0,3]
+    assert exp == out
+
+def test_plateau_1():
+    inp = [1, 2, 2, 3, 1]
+    out = find_maxima(inp)
+    exp = [3]
+    assert exp == out
+
+def test_plateau_2():
+    inp = [1, 3, 2, 2, 1]
+    out = find_maxima(inp)
+    exp = [1]
+    assert exp == out
+
+def test_plateau_3():
+    inp = [3, 2, 2, 3]
+    out = find_maxima(inp)
+    exp = [0,3]
+    assert exp == out
+
 # additional tests for
 # - max on both borders
 #   x = [4, 2, 1, 3, 1, 2]
