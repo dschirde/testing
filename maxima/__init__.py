@@ -1,3 +1,5 @@
+name = "dschirde example package"
+
 # Solution 1, only fixes the bugs without addressing the special cases
 def find_maxima_1(x):
     """Find local maxima of x.
